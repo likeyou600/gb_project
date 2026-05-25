@@ -1,0 +1,44 @@
+# STM32CubeIDE / Eclipse workspace metadata
+.metadata/
+.recommenders/
+.settings/
+
+# Build output
+Debug/
+Release/
+build/
+out/
+*.elf
+*.hex
+*.bin
+*.map
+*.list
+*.lst
+*.su
+*.cyclo
+*.d
+*.o
+*.obj
+*.a
+*.lib
+
+# Generated dependency and database files
+compile_commands.json
+.cache/
+.clangd/
+
+# Logs and temporary files
+*.log
+*.tmp
+*.bak
+*.swp
+*.swo
+~$*
+
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# OneDrive / Windows sync artifacts
+*.lnk
