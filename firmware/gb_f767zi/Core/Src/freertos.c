@@ -25,8 +25,7 @@
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
-#include "debug_task.h"
-#include "heartbeat_task.h"
+#include "app_tasks.h"
 
 /* USER CODE END Includes */
 
@@ -47,19 +46,6 @@
 
 /* Private variables ---------------------------------------------------------*/
 /* USER CODE BEGIN Variables */
-osThreadId_t heartbeatTaskHandle;
-const osThreadAttr_t heartbeatTask_attributes = {
-  .name = "heartbeat",
-  .stack_size = 256 * 4,
-  .priority = (osPriority_t) osPriorityLow,
-};
-
-osThreadId_t debugTaskHandle;
-const osThreadAttr_t debugTask_attributes = {
-  .name = "debug",
-  .stack_size = 512 * 4,
-  .priority = (osPriority_t) osPriorityLow,
-};
 
 /* USER CODE END Variables */
 /* Definitions for defaultTask */
@@ -111,8 +97,7 @@ void MX_FREERTOS_Init(void) {
 
   /* USER CODE BEGIN RTOS_THREADS */
   /* add threads, ... */
-  heartbeatTaskHandle = osThreadNew(heartbeat_task, NULL, &heartbeatTask_attributes);
-  debugTaskHandle = osThreadNew(debug_task, NULL, &debugTask_attributes);
+  app_tasks_init();
   /* USER CODE END RTOS_THREADS */
 
   /* USER CODE BEGIN RTOS_EVENTS */
