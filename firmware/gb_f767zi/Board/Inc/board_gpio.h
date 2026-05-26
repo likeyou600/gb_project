@@ -2,10 +2,11 @@
 #define BOARD_GPIO_H
 
 #ifdef __cplusplus
-extern "C" {
+extern "C"
+{
 #endif
 
-void board_gpio_init(void);
+  void board_gpio_init(void);
 
 #ifdef __cplusplus
 }

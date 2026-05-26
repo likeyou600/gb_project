@@ -6,8 +6,8 @@
 void app_log_write(const char *message)
 {
 #if APP_LOG_ENABLE
-    board_uart_write_debug(message);
+  board_uart_write_debug(message);
 #else
-    (void)message;
+  (void)message;
 #endif
 }

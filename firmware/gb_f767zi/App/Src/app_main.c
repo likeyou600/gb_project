@@ -4,7 +4,7 @@
 
 void app_main_init(void)
 {
-    app_log_write("app init\r\n");
+  app_log_write("app init\r\n");
 }
 
 void app_main_run(void)

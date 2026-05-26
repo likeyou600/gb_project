@@ -4,5 +4,5 @@
 
 void board_init(void)
 {
-    board_gpio_init();
+  board_gpio_init();
 }
