@@ -25,6 +25,7 @@ void log_service_init(void)
   LOG_INFO("RTOS-log_service", "log_service_init called");
 }
 
+/* Log function definitions ------------------------------------------------- */
 static const char *log_service_level_text(log_service_level_t level)
 {
   switch (level)
@@ -78,6 +79,7 @@ void log_service_vsubmit(log_service_level_t level, const char *module, const ch
 #endif
 }
 
+/* Log processing function to be called in the logger task------------------- */
 void log_service_process(void)
 {
   log_service_message_t logMessage;
