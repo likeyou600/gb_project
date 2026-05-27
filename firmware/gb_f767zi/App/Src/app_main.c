@@ -1,12 +1,22 @@
 #include "app_main.h"
 
-#include "app_log.h"
+#include "app_tasks.h"
+#include "Log/log_service.h"
 
 void app_main_init(void)
 {
-  app_log_write("app init\r\n");
+// Initialize application modules
+// Message queue init
+#if APP_LOG_ENABLE
+  log_service_init();
+#endif
+
+  // Initialize application tasks
+  app_tasks_init();
 }
 
 void app_main_run(void)
 {
+  LOG_INFO("RTOS-app_main", "app_main_run called");
+  // Application main loop can be implemented here if needed
 }

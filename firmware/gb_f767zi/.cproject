@@ -36,7 +36,7 @@
 									<listOptionValue builtIn="false" value="../Core/Inc"/>
 									<listOptionValue builtIn="false" value="../App/Inc"/>
 									<listOptionValue builtIn="false" value="../App/Tasks/Inc"/>
-									<listOptionValue builtIn="false" value="../App/Services/Inc"/>
+									<listOptionValue builtIn="false" value="../App/Services"/>
 									<listOptionValue builtIn="false" value="../App/Game/Inc"/>
 									<listOptionValue builtIn="false" value="../App/UI/Inc"/>
 									<listOptionValue builtIn="false" value="../Board/Inc"/>
@@ -67,7 +67,7 @@
 									<listOptionValue builtIn="false" value="../Core/Inc"/>
 									<listOptionValue builtIn="false" value="../App/Inc"/>
 									<listOptionValue builtIn="false" value="../App/Tasks/Inc"/>
-									<listOptionValue builtIn="false" value="../App/Services/Inc"/>
+									<listOptionValue builtIn="false" value="../App/Services"/>
 									<listOptionValue builtIn="false" value="../App/Game/Inc"/>
 									<listOptionValue builtIn="false" value="../App/UI/Inc"/>
 									<listOptionValue builtIn="false" value="../Board/Inc"/>
@@ -152,7 +152,7 @@
 									<listOptionValue builtIn="false" value="../Core/Inc"/>
 									<listOptionValue builtIn="false" value="../App/Inc"/>
 									<listOptionValue builtIn="false" value="../App/Tasks/Inc"/>
-									<listOptionValue builtIn="false" value="../App/Services/Inc"/>
+									<listOptionValue builtIn="false" value="../App/Services"/>
 									<listOptionValue builtIn="false" value="../App/Game/Inc"/>
 									<listOptionValue builtIn="false" value="../App/UI/Inc"/>
 									<listOptionValue builtIn="false" value="../Board/Inc"/>
@@ -182,7 +182,7 @@
 									<listOptionValue builtIn="false" value="../Core/Inc"/>
 									<listOptionValue builtIn="false" value="../App/Inc"/>
 									<listOptionValue builtIn="false" value="../App/Tasks/Inc"/>
-									<listOptionValue builtIn="false" value="../App/Services/Inc"/>
+									<listOptionValue builtIn="false" value="../App/Services"/>
 									<listOptionValue builtIn="false" value="../App/Game/Inc"/>
 									<listOptionValue builtIn="false" value="../App/UI/Inc"/>
 									<listOptionValue builtIn="false" value="../Board/Inc"/>

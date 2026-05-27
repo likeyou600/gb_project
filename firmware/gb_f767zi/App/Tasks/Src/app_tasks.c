@@ -3,6 +3,17 @@
 #include "cmsis_os.h"
 #include "debug_task.h"
 #include "heartbeat_task.h"
+#include "logger_task.h"
+#include "Log/log_service.h"
+
+#if APP_LOG_ENABLE
+static osThreadId_t loggerTaskHandle;
+static const osThreadAttr_t loggerTask_attributes = {
+  .name = "logger",
+  .stack_size = 512 * 4,
+  .priority = (osPriority_t)osPriorityNormal,
+};
+#endif
 
 static osThreadId_t heartbeatTaskHandle;
 static const osThreadAttr_t heartbeatTask_attributes = {
@@ -20,6 +31,9 @@ static const osThreadAttr_t debugTask_attributes = {
 
 void app_tasks_init(void)
 {
+#if APP_LOG_ENABLE
+  loggerTaskHandle = osThreadNew(logger_task, NULL, &loggerTask_attributes);
+#endif
   heartbeatTaskHandle = osThreadNew(heartbeat_task, NULL, &heartbeatTask_attributes);
   debugTaskHandle = osThreadNew(debug_task, NULL, &debugTask_attributes);
 }

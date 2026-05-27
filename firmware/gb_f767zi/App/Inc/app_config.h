@@ -2,5 +2,8 @@
 #define APP_CONFIG_H
 
 #define APP_LOG_ENABLE 1
+#define APP_LOG_QUEUE_DEPTH 8
+#define APP_LOG_MODULE_NAME_MAX_LEN 16
+#define APP_LOG_MESSAGE_MAX_LEN 80
 
 #endif /* APP_CONFIG_H */

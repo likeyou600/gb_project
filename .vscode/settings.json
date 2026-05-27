@@ -2,6 +2,18 @@
   "C_Cpp.clang_format_style": "file",
   "C_Cpp.clang_format_fallbackStyle": "none",
   "C_Cpp.formatting": "clangFormat",
+  "C_Cpp.intelliSenseEngine": "default",
+  "C_Cpp.errorSquiggles": "enabled",
+  "C_Cpp.autocomplete": "default",
+  "files.associations": {
+    "*.h": "c"
+  },
+  "editor.quickSuggestions": {
+    "other": true,
+    "comments": false,
+    "strings": false
+  },
+  "editor.suggestOnTriggerCharacters": true,
   "[c]": {
     "editor.defaultFormatter": "ms-vscode.cpptools",
     "editor.insertSpaces": true,

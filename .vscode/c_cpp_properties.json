@@ -1,55 +1,55 @@
 {
-  "configurations": [
-    {
-      "name": "STM32F767ZI",
-      "compilerPath": "C:/ST/STM32CubeIDE_2.1.1/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.14.3.rel1.win32_1.0.100.202602081740/tools/bin/arm-none-eabi-gcc.exe",
-      "intelliSenseMode": "windows-gcc-arm",
-      "cStandard": "gnu11",
-      "cppStandard": "gnu++17",
-      "defines": [
-        "DEBUG",
-        "USE_HAL_DRIVER",
-        "STM32F767xx"
-      ],
-      "compilerArgs": [
-        "-mcpu=cortex-m7",
-        "-mthumb",
-        "-mfpu=fpv5-d16",
-        "-mfloat-abi=hard"
-      ],
-      "includePath": [
-        "${workspaceFolder}/firmware/gb_f767zi/Core/Inc",
-        "${workspaceFolder}/firmware/gb_f767zi/App/Inc",
-        "${workspaceFolder}/firmware/gb_f767zi/App/Tasks/Inc",
-        "${workspaceFolder}/firmware/gb_f767zi/App/Services/Inc",
-        "${workspaceFolder}/firmware/gb_f767zi/App/Game/Inc",
-        "${workspaceFolder}/firmware/gb_f767zi/App/UI/Inc",
-        "${workspaceFolder}/firmware/gb_f767zi/Board/Inc",
-        "${workspaceFolder}/firmware/gb_f767zi/Components/ili9341/Inc",
-        "${workspaceFolder}/firmware/gb_f767zi/Components/mpu6050/Inc",
-        "${workspaceFolder}/firmware/gb_f767zi/Components/bme280/Inc",
-        "${workspaceFolder}/firmware/gb_f767zi/Components/w25q128/Inc",
-        "${workspaceFolder}/firmware/gb_f767zi/Components/pn532/Inc",
-        "${workspaceFolder}/firmware/gb_f767zi/Drivers/STM32F7xx_HAL_Driver/Inc",
-        "${workspaceFolder}/firmware/gb_f767zi/Drivers/STM32F7xx_HAL_Driver/Inc/Legacy",
-        "${workspaceFolder}/firmware/gb_f767zi/Drivers/CMSIS/Device/ST/STM32F7xx/Include",
-        "${workspaceFolder}/firmware/gb_f767zi/Drivers/CMSIS/Include",
-        "${workspaceFolder}/firmware/gb_f767zi/Middlewares/Third_Party/FreeRTOS/Source/include",
-        "${workspaceFolder}/firmware/gb_f767zi/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2",
-        "${workspaceFolder}/firmware/gb_f767zi/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM7/r0p1"
-      ],
-      "browse": {
-        "path": [
-          "${workspaceFolder}/firmware/gb_f767zi/Core/Inc",
-          "${workspaceFolder}/firmware/gb_f767zi/App",
-          "${workspaceFolder}/firmware/gb_f767zi/Board",
-          "${workspaceFolder}/firmware/gb_f767zi/Components",
-          "${workspaceFolder}/firmware/gb_f767zi/Drivers",
-          "${workspaceFolder}/firmware/gb_f767zi/Middlewares"
-        ],
-        "limitSymbolsToIncludedHeaders": true
-      }
-    }
-  ],
-  "version": 4
+    "configurations": [
+        {
+            "name": "STM32F767ZI",
+            "compilerPath": "C:/ST/STM32CubeIDE_2.1.1/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.14.3.rel1.win32_1.0.100.202602081740/tools/bin/arm-none-eabi-gcc.exe",
+            "intelliSenseMode": "windows-gcc-arm",
+            "cStandard": "gnu11",
+            "cppStandard": "gnu++17",
+            "defines": [
+                "DEBUG",
+                "USE_HAL_DRIVER",
+                "STM32F767xx"
+            ],
+            "compilerArgs": [
+                "-mcpu=cortex-m7",
+                "-mthumb",
+                "-mfpu=fpv5-d16",
+                "-mfloat-abi=hard"
+            ],
+            "includePath": [
+                "${workspaceFolder}/firmware/gb_f767zi/Core/Inc",
+                "${workspaceFolder}/firmware/gb_f767zi/App/Inc",
+                "${workspaceFolder}/firmware/gb_f767zi/App/Tasks/Inc",
+                "${workspaceFolder}/firmware/gb_f767zi/App/Services",
+                "${workspaceFolder}/firmware/gb_f767zi/App/Game/Inc",
+                "${workspaceFolder}/firmware/gb_f767zi/App/UI/Inc",
+                "${workspaceFolder}/firmware/gb_f767zi/Board/Inc",
+                "${workspaceFolder}/firmware/gb_f767zi/Components/ili9341/Inc",
+                "${workspaceFolder}/firmware/gb_f767zi/Components/mpu6050/Inc",
+                "${workspaceFolder}/firmware/gb_f767zi/Components/bme280/Inc",
+                "${workspaceFolder}/firmware/gb_f767zi/Components/w25q128/Inc",
+                "${workspaceFolder}/firmware/gb_f767zi/Components/pn532/Inc",
+                "${workspaceFolder}/firmware/gb_f767zi/Drivers/STM32F7xx_HAL_Driver/Inc",
+                "${workspaceFolder}/firmware/gb_f767zi/Drivers/STM32F7xx_HAL_Driver/Inc/Legacy",
+                "${workspaceFolder}/firmware/gb_f767zi/Drivers/CMSIS/Device/ST/STM32F7xx/Include",
+                "${workspaceFolder}/firmware/gb_f767zi/Drivers/CMSIS/Include",
+                "${workspaceFolder}/firmware/gb_f767zi/Middlewares/Third_Party/FreeRTOS/Source/include",
+                "${workspaceFolder}/firmware/gb_f767zi/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2",
+                "${workspaceFolder}/firmware/gb_f767zi/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM7/r0p1"
+            ],
+            "browse": {
+                "path": [
+                    "${workspaceFolder}/firmware/gb_f767zi/Core/Inc",
+                    "${workspaceFolder}/firmware/gb_f767zi/App",
+                    "${workspaceFolder}/firmware/gb_f767zi/Board",
+                    "${workspaceFolder}/firmware/gb_f767zi/Components",
+                    "${workspaceFolder}/firmware/gb_f767zi/Drivers",
+                    "${workspaceFolder}/firmware/gb_f767zi/Middlewares"
+                ],
+                "limitSymbolsToIncludedHeaders": true
+            }
+        }
+    ],
+    "version": 4
 }
