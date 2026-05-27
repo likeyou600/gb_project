@@ -7,6 +7,8 @@ extern "C"
 #endif
 
   void board_gpio_init(void);
+  void board_debug_pin_set(void);
+  void board_debug_pin_reset(void);
 
 #ifdef __cplusplus
 }
