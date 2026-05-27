@@ -85,8 +85,8 @@ void log_service_process(void)
 
   if (osMessageQueueGet(logQueueHandle, &logMessage, NULL, osWaitForever) == osOK)
   {
-    (void)snprintf(line, sizeof(line), "[%08lu][%-5s][%s] %s\r\n", logMessage.timestamp, logMessage.module,
-                   log_service_level_text(logMessage.level), logMessage.message);
+    (void)snprintf(line, sizeof(line), "[%08lu][%-5s][%s] %s\r\n", logMessage.timestamp,
+                   log_service_level_text(logMessage.level), logMessage.module, logMessage.message);
     board_uart_write_debug(line);
   }
 }
