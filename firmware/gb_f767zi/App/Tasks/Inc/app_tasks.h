@@ -14,6 +14,7 @@ extern "C"
   osThreadId_t app_tasks_get_debug_handle(void);
   osThreadId_t app_tasks_get_heartbeat_handle(void);
   osThreadId_t app_tasks_get_input_handle(void);
+  osThreadId_t app_tasks_get_input_irq_handle(void);
   osThreadId_t app_tasks_get_input_debug_handle(void);
   osThreadId_t app_tasks_get_monitor_handle(void);
 

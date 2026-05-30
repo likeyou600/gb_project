@@ -6,6 +6,7 @@
 #include "debug_task.h"
 #include "heartbeat_task.h"
 #include "input_debug_task.h"
+#include "input_irq_task.h"
 #include "input_task.h"
 #include "logger_task.h"
 #include "Log/log_service.h"
@@ -74,6 +75,15 @@ static const osThreadAttr_t inputTask_attributes = {
 };
 #endif
 
+#if APP_INPUT_ENABLE && APP_INPUT_IRQ_TASK_ENABLE
+static osThreadId_t inputIrqTaskHandle;
+static const osThreadAttr_t inputIrqTask_attributes = {
+  .name = "inputIrq",
+  .stack_size = 512 * 4,
+  .priority = (osPriority_t)osPriorityNormal,
+};
+#endif
+
 #if APP_INPUT_ENABLE && APP_INPUT_DEBUG_TASK_ENABLE
 static osThreadId_t inputDebugTaskHandle;
 static const osThreadAttr_t inputDebugTask_attributes = {
@@ -86,11 +96,13 @@ static const osThreadAttr_t inputDebugTask_attributes = {
 /* Task initialization function ------------------------------------------------- */
 void app_tasks_init(void)
 {
+/* 測試相關 function ------------------------------------------------- */
 #if APP_BUSY_TASK_TEST_ENABLE
   busyTaskHandle = osThreadNew(busy_task, NULL, &busyTask_attributes);
   app_tasks_log_create_result("busy", busyTaskHandle);
 #endif
 
+/* 監控相關 function ------------------------------------------------- */
 #if APP_MONITOR_TASK_ENABLE
   monitorTaskHandle = osThreadNew(monitor_task, NULL, &monitorTask_attributes);
   app_tasks_log_create_result("monitor", monitorTaskHandle);
@@ -100,16 +112,21 @@ void app_tasks_init(void)
   loggerTaskHandle = osThreadNew(logger_task, NULL, &loggerTask_attributes);
   app_tasks_log_create_result("logger", loggerTaskHandle);
 #endif
-
+/* 調試相關 function ------------------------------------------------- */
   debugTaskHandle = osThreadNew(debug_task, NULL, &debugTask_attributes);
   app_tasks_log_create_result("debug", debugTaskHandle);
 
   heartbeatTaskHandle = osThreadNew(heartbeat_task, NULL, &heartbeatTask_attributes);
   app_tasks_log_create_result("heartbeat", heartbeatTaskHandle);
 
+/* 輸入相關 function ------------------------------------------------- */
 #if APP_INPUT_ENABLE
   inputTaskHandle = osThreadNew(input_task, NULL, &inputTask_attributes);
   app_tasks_log_create_result("input", inputTaskHandle);
+#endif
+#if APP_INPUT_ENABLE && APP_INPUT_IRQ_TASK_ENABLE
+  inputIrqTaskHandle = osThreadNew(input_irq_task, NULL, &inputIrqTask_attributes);
+  app_tasks_log_create_result("input_irq", inputIrqTaskHandle);
 #endif
 #if APP_INPUT_ENABLE && APP_INPUT_DEBUG_TASK_ENABLE
   inputDebugTaskHandle = osThreadNew(input_debug_task, NULL, &inputDebugTask_attributes);
@@ -161,6 +178,15 @@ osThreadId_t app_tasks_get_input_handle(void)
 {
 #if APP_INPUT_ENABLE
   return inputTaskHandle;
+#else
+  return NULL;
+#endif
+}
+
+osThreadId_t app_tasks_get_input_irq_handle(void)
+{
+#if APP_INPUT_ENABLE && APP_INPUT_IRQ_TASK_ENABLE
+  return inputIrqTaskHandle;
 #else
   return NULL;
 #endif

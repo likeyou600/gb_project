@@ -25,6 +25,7 @@ void monitor_task(void *argument)
     monitor_task_log_stack("debug", app_tasks_get_debug_handle());
     monitor_task_log_stack("heartbeat", app_tasks_get_heartbeat_handle());
     monitor_task_log_stack("input", app_tasks_get_input_handle());
+    monitor_task_log_stack("input_irq", app_tasks_get_input_irq_handle());
     monitor_task_log_stack("input_debug", app_tasks_get_input_debug_handle());
     monitor_task_log_stack("busy", app_tasks_get_busy_handle());
     monitor_task_log_stack("monitor", app_tasks_get_monitor_handle());
