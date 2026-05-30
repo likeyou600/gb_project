@@ -11,6 +11,6 @@ void debug_task(void *argument)
   for (;;)
   {
     LOG_INFO("RTOS-debug_task", "debug_task alive counter=%lu", counter++);
-    osDelay(1000U);
+    osDelay(20000U);
   }
 }

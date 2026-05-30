@@ -1,6 +1,7 @@
 #include "app_main.h"
 
 #include "app_tasks.h"
+#include "Input/input_service.h"
 #include "Log/log_service.h"
 
 void app_main_init(void)
@@ -9,6 +10,9 @@ void app_main_init(void)
 // Message queue init
 #if APP_LOG_ENABLE
   log_service_init();
+#endif
+#if APP_INPUT_ENABLE
+  input_service_init();
 #endif
 
   // Initialize application tasks
