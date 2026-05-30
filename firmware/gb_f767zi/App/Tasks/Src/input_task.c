@@ -12,6 +12,7 @@ typedef struct
   bool stable_pressed;
   bool last_raw_pressed;
   uint32_t last_change_tick;
+  uint32_t press_start_tick;
 } input_button_state_t;
 
 static input_button_state_t buttonState[sizeof(buttonMap) / sizeof(buttonMap[0])];
@@ -34,7 +35,19 @@ static void input_task_debounce_button(const input_button_hw_t *hw, input_button
 
       if (state->stable_pressed)
       {
-        (void)input_service_post_event(hw->key, INPUT_ACTION_SHORT);
+        state->press_start_tick = now;
+      }
+      else
+      {
+        uint32_t press_duration = now - state->press_start_tick;
+        input_action_t action = INPUT_ACTION_SHORT;
+
+        if (press_duration >= APP_INPUT_LONG_PRESS_MS)
+        {
+          action = INPUT_ACTION_LONG;
+        }
+
+        (void)input_service_post_event(hw->key, action);
       }
     }
   }
